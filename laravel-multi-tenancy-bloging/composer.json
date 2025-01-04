@@ -1,0 +1,80 @@
+{
+    "name": "michaelnabil230/laravel-multi-tenancy",
+    "description": "Automatic multi-tenancy for your Laravel application.",
+    "keywords": [
+        "MichaelNabil230",
+        "laravel",
+        "laravel-multi-tenancy",
+        "multi-tenancy",
+        "tenancy",
+        "subscriptions",
+        "plan"
+    ],
+    "homepage": "https://github.com/michaelnabil230/laravel-multi-tenancy",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Nabil",
+            "email": "michaelnabil926@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "facade/ignition-contracts": "^1.0.2",
+        "spatie/laravel-package-tools": "^1.16.0",
+        "illuminate/contracts": "^v10.18.0",
+        "spatie/dns": "^2.5.4",
+        "spatie/laravel-sluggable": "^3.5.0",
+        "spatie/laravel-translatable": "^6.5.3"
+    },
+    "require-dev": {
+        "laravel/pint": "^v1.10.6",
+        "nunomaduro/collision": "^v7.8.1",
+        "nunomaduro/larastan": "^v2.6.4",
+        "orchestra/testbench": "^v8.6.3",
+        "pestphp/pest": "^v2.13.0",
+        "pestphp/pest-plugin-laravel": "^v2.2.0",
+        "phpstan/extension-installer": "^1.3.1",
+        "phpstan/phpstan-deprecation-rules": "^1.1.4",
+        "phpstan/phpstan-phpunit": "^1.3.13",
+        "phpunit/phpunit": "^10.3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "MichaelNabil230\\MultiTenancy\\": "src",
+            "MichaelNabil230\\MultiTenancy\\Database\\Factories\\": "database/factories"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MichaelNabil230\\MultiTenancy\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MichaelNabil230\\MultiTenancy\\MultiTenancyServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
