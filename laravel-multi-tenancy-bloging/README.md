@@ -699,7 +699,6 @@ $subscription = MultiTenancy::subscription()->find(1);
 $subscription->changePlan($plan);
 ```
 
-If both plans (current and new plan) have the same billing frequency (e.g., `invoice_period` and `invoice_interval`) the subscription will retain the same billing dates. If the plans don't have the same billing frequency, the subscription will have the new plan billing frequency, starting on the day of the change and the subscription usage data will be cleared. Also if the new plan has a trial period and it's a new subscription, the trial period will be applied.
 
 ### Check Subscription Status
 
@@ -788,9 +787,6 @@ MichaelNabil230\MultiTenancy\Models\Subscription;
 MichaelNabil230\MultiTenancy\Models\Section;
 ```
 
-## Support
-
-[![](.assets/ko-fi.png)](https://ko-fi.com/michaelnabil230)[![](.assets/buymeacoffee.png)](https://www.buymeacoffee.com/michaelnabil230)[![](.assets/paypal.png)](https://www.paypal.com/paypalme/MichaelNabil23)
 
 ## Testing
 
@@ -798,22 +794,6 @@ MichaelNabil230\MultiTenancy\Models\Section;
 composer test
 ```
 
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [Michael Nabil](https://github.com/MichaelNabil230)
-- [All Contributors](../../contributors)
 
 ## License
 

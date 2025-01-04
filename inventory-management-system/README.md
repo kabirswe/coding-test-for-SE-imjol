@@ -1,9 +1,5 @@
 # ✨ Inventory Management System
 
-A robust Inventory Management System built with **Laravel 10** and **MySQL**, designed to streamline your inventory tracking, sales, and purchasing processes.
-
-![Dashboard](https://github.com/user-attachments/assets/1df45f1d-aaed-4299-9b90-35e7f47dc7ea)
-
 ## 🗂️ Database Design
 The system is structured using a clear and efficient database schema:
 
